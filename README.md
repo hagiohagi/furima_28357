@@ -14,9 +14,7 @@
 | lastname_kanji        | string  | null: false |
 | firstname_katakana    | string  | null: false |
 | lastname_katakana     | string  | null: false |
-| birth_year            | integer | null: false |
-| birth_month           | integer | null: false |
-| birth_day             | integer | null: false |
+| birth_day             | date    | null: false |
 
 
 
@@ -29,27 +27,33 @@
 
 ## items テーブル
 
-| Column  | Type       | Options                        |
-| ------- | ---------- | ------------------------------ |
-| name    | string     | null: false                    |
-| image   | string     |                                |
-| price   | integer    | null: false                    |
-| user_id | references | null: false ,foreign_key: true |
-| tax     | boolean    | null: false  |
-| text    | text       |                                |
+| Column     | Type       | Options                        |
+| ---------  | ---------- | ------------------------------ |
+| name       | string     | null: false                    |
+| image      | string     | null: false                    |
+| price      | integer    | null: false                    |
+| user       | references | null: false ,foreign_key: true |
+| tax        | boolean    | null: false                    |
+| text       | text       |                                |
+| genre      | integer    | null: false                    |
+| quality    | integer    | null: false                    |
+| payment    | integer    | null: false                    |
+| prefecture | integer    | null: false                    |
+| days       | integer    | null: false                    |
 
 ### Association
 
 - belongs_to :user
 - has_many :comments
+- has_one :order
 
 ## comments テーブル
 
 | Column  | Type       | Options                        |
 | ------- | ---------- | ------------------------------ |
 | text    | text       |                                |
-| user_id | references | null: false, foreign_key: true |
-| item_id | references | null: false, foreign_key: true |
+| user    | references | null: false, foreign_key: true |
+| item    | references | null: false, foreign_key: true |
 
 ### Association
 
@@ -60,8 +64,8 @@
 
 | Column  | Type       | Options                        |
 | ------- | ---------- | ------------------------------ |
-| user_id | references | null: false, foreign_key: true |
-| item_id | references | null: false, foreign_key: true |
+| user    | references | null: false, foreign_key: true |
+| item    | references | null: false, foreign_key: true |
 
 ### Association
 
@@ -74,7 +78,7 @@ has_one :address
 | Column         | Type    | Options     |
 | -------------- | ------- | ----------- |
 | postal_code    | string  | null: false |
-| prefecture     | string  | null: false |
+| prefecture     | integer | null: false |
 | city           | string  | null: false |
 | house_number   | string  | null: false |
 | building_name  | string  |             |
