@@ -4,11 +4,13 @@
 // that code so it'll be compiled.
 
 require("@rails/ujs").start()
-require("turbolinks").start()
+//require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
-import Rails from 'rails-ujs'
-Rails.start()
+require("../items.js")
+//require("../channels/index")
+// import Rails from 'rails-ujs'
+// Rails.start()
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
