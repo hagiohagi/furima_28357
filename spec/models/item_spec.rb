@@ -69,6 +69,32 @@ describe '商品出品' do
       @item.valid?
      expect(@item.errors.full_messages).to include("Price must be less than 9999999")
     end
+    it "genre_idの値が、id: 0,name:'--'の時は保存できないこと" do
+      @item.genre_id = [0]
+      @item.valid?
+     expect(@item.errors.full_messages).to include("Genre can't be blank", "Genre is not a number")
+    end
+     it "quality_idの値が、id:0,name:'--'の時は保存できないこと" do
+      @item.quality_id = [0]
+      @item.valid?
+     expect(@item.errors.full_messages).to include("Quality can't be blank", "Quality is not a number")
+     end
+     it "payment_idの値が、id:0,name:'--'の時は保存できないこと" do
+      @item.payment_id = [0]
+      @item.valid?
+     expect(@item.errors.full_messages).to include("Payment can't be blank", "Payment is not a number")
+     end
+     it "prefecture_idの値が、id:0,name:'--'の時は保存できないこと" do
+      @item.prefecture_id = [0]
+      @item.valid?
+     expect(@item.errors.full_messages).to include("Prefecture can't be blank", "Prefecture is not a number")
+     end
+     it "days_idの値が、id:0,name:'--'の時は保存できないこと" do
+      @item.days_id = [0]
+      @item.valid?
+     expect(@item.errors.full_messages).to include("Days can't be blank", "Days is not a number")
+      
+    end
 
   end
 end
