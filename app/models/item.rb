@@ -10,12 +10,13 @@ class Item < ApplicationRecord
   validates :price, numericality: {less_than: 9999999,greater_than: 300}
   
 
-  with_options numericality: { other_than: 0 }
-  validates :genre_id
-  validates :quality_id
-  validates :payment_id
-  validates :prefecture_id
-  validates :days_id
+  with_options numericality:{ other_than: 0 } do
+    validates :genre_id
+    validates :quality_id
+    validates :payment_id
+    validates :prefecture_id
+    validates :days_id
+  end
 
   belongs_to :user
   has_many :comments
