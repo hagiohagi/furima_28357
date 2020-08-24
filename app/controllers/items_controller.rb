@@ -20,7 +20,7 @@ class ItemsController < ApplicationController
   end
 
   def show
-
+  @item = Item.find(params[:id])
   end
 
   def edit
@@ -30,6 +30,8 @@ class ItemsController < ApplicationController
   end
 
   def destroy
+    item = Tweet.find(params[:id])
+    item.destroy
   end
 
   private
