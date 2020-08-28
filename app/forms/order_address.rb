@@ -10,6 +10,7 @@ class OrderAddress
     validates :city
     validates :house_number
     validates :phone_number, format: { with: /\A\d{11}\z/, less_than: 12, greater_than: 10 }
+    validates :token
   end
 
   def save
