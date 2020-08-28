@@ -8,7 +8,8 @@ require("@rails/ujs").start()
 require("@rails/activestorage").start()
 require("channels")
 require("../items.js")
-//require("../channels/index")
+require("../card")
+
 // import Rails from 'rails-ujs'
 // Rails.start()
 
