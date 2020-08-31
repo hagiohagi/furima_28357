@@ -13,7 +13,6 @@ class OrdersController < ApplicationController
     @item = Item.find(params[:item_id])
     @user = User.find(@item.user_id)
     @order = OrderAddress.new(order_params)
-    binding.pry
     if @order.valid?
       pay_item
       @order.save
