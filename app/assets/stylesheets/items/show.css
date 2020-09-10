@@ -204,3 +204,10 @@
   font-weight: bold;
   font-size: 23px;
 }
+
+
+.breadcrumbs{
+  font-size: 1vh;
+  padding: 1vw;
+  background: #f8f8f8;
+}

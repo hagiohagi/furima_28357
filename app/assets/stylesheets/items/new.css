@@ -227,3 +227,9 @@
 .inc {
   font-size: 13px;
 }
+
+.breadcrumbs{
+  font-size: 1vh;
+  padding: 1vw;
+  background: #f8f8f8;
+}
