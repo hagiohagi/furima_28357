@@ -8,7 +8,7 @@ crumb :new_item do
 end
 
 crumb :item do
-  link "商品の説明", item_path(params[:item_id])
+  link "商品の説明", item_path
   parent :root
 end
 
