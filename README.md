@@ -6,7 +6,7 @@
   
 # アプリケーション情報
   
-接続先情報  
+【接続先情報】  
 https://furima28357.herokuapp.com/  
 【Basic認証】  
 ID: admin  
